@@ -2,27 +2,37 @@ package org.example;
 
 import java.util.List;
 
-public class quiz{
-    private String pregunta;
-    private List<String> respuestas;
-    private int respuestaCorrecta
+public class Pregunta {
+    private String textoPregunta;
+    private List<String> opciones;
+    private int indiceRespuestaCorrecta;
 
-    public(String pregunta, List<String> respuestas, int respuestaCorrecta){
-        this.pregunta = pregunta;
-        this.respuestas = respuestas;
-        this.respuestaCorrecta = respuestaCorrecta;
+    public Pregunta(String textoPregunta, List<String> opciones, int indiceRespuestaCorrecta) {
+        this.textoPregunta = textoPregunta;
+        this.opciones = opciones;
+        this.indiceRespuestaCorrecta = indiceRespuestaCorrecta;
     }
 
-    public int getRespuestaCorrecta(){
-        return respuestaCorrecta;
-
+    public String getTextoPregunta() {
+        return textoPregunta;
     }
 
-    public void mostrarPregunta(){
-        System.out.println(pregunta);
-        for (String respuesta : respuestas){
-            System.out.println(respuestas.indexOf(respuesta)+1+". "+respuesta);
+    public List<String> getOpciones() {
+        return opciones;
+    }
+
+    public int getIndiceRespuestaCorrecta() {
+        return indiceRespuestaCorrecta;
+    }
+
+    public boolean esRespuestaCorrecta(int indiceOpcion) {
+        return indiceOpcion == indiceRespuestaCorrecta;
+    }
+
+    public void mostrarPregunta() {
+        System.out.println(textoPregunta);
+        for (int i = 0; i < opciones.size(); i++) {
+            System.out.println((i + 1) + ": " + opciones.get(i));
         }
     }
 }
-
