@@ -27,7 +27,7 @@ public class Main {
         respuestas2.add("Cordoba");
         respuestas2.add("Santa Fe");
 
-        Pregunta pregunta2 = new Pregunta("¿Cual es la capital de Argentina?", respuestas2, 1);
+        Pregunta pregunta2 = new Pregunta("¿Cuál es la capital de Argentina?", respuestas2, 1);
         quiz.agregarPregunta(pregunta2);
 
         List<String> respuestas3 = new ArrayList<>();
@@ -36,9 +36,8 @@ public class Main {
         respuestas3.add("Marte");
         respuestas3.add("Tierra");
 
-        Pregunta pregunta3 = new Pregunta("¿Cual es el planeta mas cercano al sol?", respuestas3, 0);
+        Pregunta pregunta3 = new Pregunta("¿Cuál es el planeta más cercano al sol?", respuestas3, 0);
         quiz.agregarPregunta(pregunta3);
-
 
         // Iniciar el cuestionario
         quiz.iniciar();
